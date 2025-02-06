@@ -1,0 +1,231 @@
+:root {
+    --white: #FFFFFF; /* Clean white for backgrounds */
+    --soft-grey: #F5F5F5; /* Light grey for subtle contrast */
+    --black: #000000; /* Strong black for text and important elements */
+    --muted-pink: #F6D1D1; /* Soft pastel pink for accents */
+    --muted-blue: #B0D8F2; /* Soft pastel blue for accents */
+    --mint-green: #A5D8D1; /* Soft mint green for accents */
+    --charcoal-grey: #333333; /* Dark grey for text or headers */
+    --beige: #F5E6D3; /* Warm beige for contrast */
+    --primaryColor: #ff274b;  
+}
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    font-family: cursive;
+  }
+
+  html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primaryColor);
+    border-radius: 2em;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    margin-block: .3rem;
+
+}
+/* Header design */
+.landingPage-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 13vh;
+    background-color: var(--soft-grey);
+}
+.logo{
+    height: 3rem;
+    margin-left: 8rem;
+}
+.landingPage-header >div{
+    margin-right: 5rem;
+    display: flex;
+    gap: 1rem;
+}
+.btnContainer :nth-child(1){
+    background-color: var(--muted-blue);
+    border: 2px solid var(--muted-blue) ;
+}
+.btnContainer :nth-child(2){
+    background-color: var(--mint-green);
+    border: 2px solid var(--mint-green) ;
+}
+.btn1 {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.landingPage-header >div :nth-child(1):hover{
+    color: var(--muted-blue);
+}
+
+.landingPage-header >div :nth-child(2):hover{
+    color: var(--mint-green);
+}
+.btn1:hover{
+    background-color: transparent;
+}
+
+
+/* heroSection */
+.heroSection{
+    display: flex;
+    background-color: var(--soft-grey);
+    gap: 10vw;
+    align-items: center;
+    /* justify-content: center; */  
+    width: 100%;
+    padding-left: 10vw;
+    margin-bottom: 10vh;
+}
+.heroSection > img {
+    height: 80vh;
+
+}
+.heroSection > div{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.heroSection > div >h2{
+font-size: 4.5rem;
+}
+.heroSection > div >h2 >span{
+    color: var(--primaryColor);
+}
+.heroSection > div >p{
+    font-size: 1.8rem;
+}
+.btn2{
+    padding: 1.5rem 2.2rem;
+    background-color: var(--primaryColor);
+    width: fit-content;
+    color: var(--white);
+    font-size: 2rem;
+    border: .2rem solid var(--primaryColor);
+}
+.btn2:hover{
+    background-color: transparent;
+    color: var(--primaryColor);
+}
+
+
+
+/* why Shopping with us */
+
+.whyShopWithUs,.newArrivals{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0 8vw ;
+    padding-bottom:10vh ;
+
+}
+.whyShopWithUs > h2,.newArrivals>h2{
+    align-self: center;
+    font-size: 4rem;
+}
+.whyShopWithUsCardContainer ,.ArrivalsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr)); 
+    gap: 2rem;
+}
+
+
+.whyShopWithUs .whyShopWithUsCard{
+height: 40vh;
+text-align: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+background-color: var(--beige);
+border-radius: 2rem;
+ }
+ .whyShopWithUs .whyShopWithUsCard >h3{
+    font-size: 3rem;
+ }
+ .whyShopWithUs .whyShopWithUsCard >p{
+    font-size: 2rem;
+ }
+
+.whyShopWithUsCard > i{
+    font-size: 5rem;
+    color: var(--primaryColor);
+}
+
+
+/* new Arrivals */
+.newArrivals{
+    background-color: var(--beige);
+    
+
+}
+.ProductCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 5rem 1rem;
+    border-radius: 3rem;
+}
+.ProductCard >h3{
+    color: var(--primaryColor);
+    font-size: 2rem;
+}
+.ProductCard >img{
+    max-width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+/* 768 */
+@media (max-width:768px){
+    .heroSection > img {
+        display: none;
+    }
+}
+
+footer {
+    background-color: var(--charcoal-grey);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+  }
+
+  footer p {
+    margin: 0;
+  }
+  footer p span{
+    color: var(--primaryColor);
+  }
+
+  footer a {
+    color: var(--muted-blue);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--muted-pink);
+  }
